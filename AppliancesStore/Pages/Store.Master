@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="AppliancesStore.Pages.Store" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>AppliancesStore</title>
+    <link rel="stylesheet" href="/Content/Styles.css" />
+     <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="header">
+                <GS:CartSummary runat="server" />
+                <div class="title">AppliancesStore - магазин бытовой техники</div>
+            </div>
+            <div id="categories">
+                <GS:CategoryLinks runat="server" />
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
